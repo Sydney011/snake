@@ -63,15 +63,7 @@ function updateSnakeCell() {
       $('div.gameOver').append('<div class="final">You&#39;ve Scored : '+score+'</div>');
     });
     gameOver();
-  }/*else {
-    if (newCell.hasClass('snakeCell')) {
-      $(document).ready(function () {
-        $('table').hide('slow');
-        $('#scoreBoard').hide('slow');
-        $('div.gameOver').append('<div class="final">You&#39;ve Scored : '+score+'</div>');
-      });
-      gameOver();
-    } */else {
+  }else {
       if (newCell.hasClass('fruitCell')) {
         snakeCells.push([]);
         getFruitCell();
