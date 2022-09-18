@@ -20,7 +20,6 @@ body {
   padding: 5px 10px;
   display: inline-block;
   border-radius: 5px;
-  margin-bottom: 20px;
 }
 #play:hover {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.8);
@@ -37,16 +36,15 @@ body {
   padding: 10px 0;
   font-size: 150%;
 }
-.final::after{
-  content: "\a";
-  white-space: pre;
+.final{
+  padding-top: 25px;
 }
 #oops::after{
   content: "\a";
   white-space: pre;
 }
 /*------------------Game Panel------------------*/
-td {
+td{
   border-radius: 40%;
 }
 
@@ -61,7 +59,7 @@ td.snakeHead {
 td.fruitCell {
   background: #4ade1c;
 }
-table {
+table{
   width: 450px;
   height: 450px;
   background-color: #333;
@@ -96,4 +94,36 @@ button:hover {
   background-color: #85c9f3;
   border-color: #85c9f3;
   transition: 0.2s;
+}
+/*------------------Best Scores------------------*/
+.BestScores{
+  border: 1px #222 solid;
+  box-shadow: 0px 0px 10px 0px #000;
+  display: grid;
+  grid-template: 250px 100px;
+  column-gap: 2px;
+  background-color: #333;
+  width: auto;
+  color: #999;
+  height: auto;
+  position: fixed;
+  margin-top: 50px;
+  left: 100px;
+}
+li{
+  margin-left: 30px;
+  margin-right: -30px;
+  padding: 1px;
+}
+.grid-item{
+  width: 150px;
+  display: inline-block;
+  padding: 1px;
+  font-size: 15px;
+}
+.scoreboardTitle{
+  font-weight: bold;
+  color: #666;
+  font-size: 30px;
+  text-align: center;
 }
