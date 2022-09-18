@@ -56,14 +56,14 @@ function updateSnakeCell() {
     return;
   } 
   var newCell = $('tr').eq(snakeNewHead[0]).find('td').eq(snakeNewHead[1]);
-  if (newCell.length == 0) {
+  if((newCell.length == 0)||(newCell.hasClass('snakeCell'))){
     $(document).ready(function () {
       $('table').hide('slow');
       $('#scoreBoard').hide('slow');
       $('div.gameOver').append('<div class="final">You&#39;ve Scored : '+score+'</div>');
     });
     gameOver();
-  } else {
+  }/*else {
     if (newCell.hasClass('snakeCell')) {
       $(document).ready(function () {
         $('table').hide('slow');
@@ -71,7 +71,7 @@ function updateSnakeCell() {
         $('div.gameOver').append('<div class="final">You&#39;ve Scored : '+score+'</div>');
       });
       gameOver();
-    } else {
+    } */else {
       if (newCell.hasClass('fruitCell')) {
         snakeCells.push([]);
         getFruitCell();
@@ -89,7 +89,7 @@ function updateSnakeCell() {
       renderSnake();
     }
   }
-}
+
 
 function getRandomNumber(limit) {
   return parseInt(Math.random() * limit % limit);
