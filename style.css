@@ -4,7 +4,7 @@
 }
 
 body {
-  width: 300px;
+  width: 450px;
   position: realtive;
   margin: 0 auto;
   background-color: #222;
@@ -29,14 +29,19 @@ body {
   margin-left: -100px;
   position: fixed;
   left: 50%;
-  bottom: -100px;
+  bottom: -200px;
   display: block;
   color: #d61717;
   text-align: center;
   padding: 10px 0;
+  font-size: 150%;
 }
 .final{
   padding-top: 25px;
+}
+#oops::after{
+  content: "\a";
+  white-space: pre;
 }
 /*------------------Game Panel------------------*/
 td {
@@ -55,15 +60,15 @@ td.fruitCell {
   background: #4ade1c;
 }
 table {
-  width: 300px;
-  height: 300px;
+  width: 450px;
+  height: 450px;
   background-color: #333;
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
 #scoreBoard {
   margin-top: 50px;
-  width: 300px;
+  width: 450px;
   background-color: #444;
   padding: 10px 0;
   text-align: center;
@@ -73,10 +78,11 @@ table {
 
 /*------------------Button Start------------------*/
 button {
-  width: 200px;
+  width: 230px;
+  height: 60px;
   margin-left: -100px;
   position: fixed;
-  left: 50%;
+  left: 49%;
   bottom: 250px;
   display: block;
   text-align: center;
