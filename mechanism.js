@@ -50,7 +50,7 @@ function updateSnakeCell() {
     $(document).ready(function () {
       $('table').hide('slow');
       $('#scoreBoard').hide('slow');
-      $('div.gameOver').append('<div class="final">You&#39;ve Scored : '+score+'</div>');
+      $('div.gameOver').append('<span class="final">You&#39;ve Scored : </span><span>'+score+'</span></div>');
     });
     gameOver()
     return;
