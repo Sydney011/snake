@@ -20,10 +20,14 @@ function renderSnake() {
 
 function getFruitCell() {
   fruitCell = [getRandomNumber($('tr').length), getRandomNumber($('tr:eq(0)>td').length)];
+  
 }
+
 function gameOver() {
   $("div.gameOver").fadeTo("slow", 1);
-  $("div.gameOver").animate({ bottom: '500px' }, "slow");
+  $("div.gameOver").animate({
+    bottom: '500px'
+  }, "slow");
   clearInterval(ticker);
 }
 
@@ -46,43 +50,43 @@ function updateSnakeCell() {
   var newCell = {
     length: 0
   }
-  if ((snakeNewHead[0] < 0 || snakeNewHead[1] < 0)|| (snakeNewHead[0] >= size || snakeNewHead[1] >= size)) {
+  if ((snakeNewHead[0] < 0 || snakeNewHead[1] < 0) || (snakeNewHead[0] >= size || snakeNewHead[1] >= size)) {
     $(document).ready(function () {
       $('table').hide('slow');
       $('#scoreBoard').hide('slow');
-      $('div.gameOver').append('<div class="final">You&#39;ve Scored : '+score+'</div>');
+      $('div.gameOver').append('<div class="final">You&#39;ve Scored : ' + score + '</div>');
     });
     gameOver()
     return;
-  } 
+  }
   var newCell = $('tr').eq(snakeNewHead[0]).find('td').eq(snakeNewHead[1]);
-  if((newCell.length == 0)||(newCell.hasClass('snakeCell'))){
+  if ((newCell.length == 0) || (newCell.hasClass('snakeCell'))) {
     $(document).ready(function () {
       $('table').hide('slow');
       $('#scoreBoard').hide('slow');
-      $('div.gameOver').append('<div class="final">You&#39;ve Scored : '+score+'</div>');
+      $('div.gameOver').append('<div class="final">You&#39;ve Scored : ' + score + '</div>');
     });
     gameOver();
-  }else {
-      if (newCell.hasClass('fruitCell')) {
-        snakeCells.push([]);
-        getFruitCell();
-        renderFruitCell();
-        score += 10;
-        $('#scoreBoard').html('Your Score : ' + score);
-        
-        speed = speed - 2 > 50 ? speed - 4 : speed;
-        
-        clearInterval(ticker);
-        startGame();
-      }
-      for (var i = (snakeCells.length - 1); i > 0; i--) {
-        snakeCells[i] = snakeCells[i - 1];
-      }
-      snakeCells[0] = snakeHead = snakeNewHead;
-      renderSnake();
+  } else {
+    if (newCell.hasClass('fruitCell')) {
+      snakeCells.push([]);
+      getFruitCell();
+      renderFruitCell();
+      score += 10;
+      $('#scoreBoard').html('Your Score : ' + score);
+
+      speed = speed - 2 > 50 ? speed - 4 : speed;
+
+      clearInterval(ticker);
+      startGame();
     }
+    for (var i = (snakeCells.length - 1); i > 0; i--) {
+      snakeCells[i] = snakeCells[i - 1];
+    }
+    snakeCells[0] = snakeHead = snakeNewHead;
+    renderSnake();
   }
+}
 
 
 function getRandomNumber(limit) {
@@ -134,8 +138,8 @@ function renderBoard() {
 function renderFruitCell() {
   $('td').removeClass('fruitCell');
   $('tr').eq(fruitCell[0]).find('td').eq(fruitCell[1]).addClass('fruitCell');
-}
 
+}
 function startGame() {
   ticker = setInterval(updateSnakeCell, speed);
 }
@@ -153,4 +157,3 @@ $('button').click(function () {
 $('button').click(function () {
   $(this).fadeOut('fast');
 });
-
