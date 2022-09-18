@@ -4,7 +4,7 @@
 }
 
 body {
-  width: 300px;
+  width: 450px;
   position: realtive;
   margin: 0 auto;
   background-color: #222;
@@ -55,15 +55,15 @@ td.fruitCell {
   background: #4ade1c;
 }
 table {
-  width: 300px;
-  height: 300px;
+  width: 450px;
+  height: 450px;
   background-color: #333;
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
 #scoreBoard {
   margin-top: 50px;
-  width: 300px;
+  width: 450px;
   background-color: #444;
   padding: 10px 0;
   text-align: center;
