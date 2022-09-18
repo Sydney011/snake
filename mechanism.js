@@ -23,7 +23,7 @@ function getFruitCell() {
 }
 function gameOver() {
   $("div.gameOver").fadeTo("slow", 1);
-  $("div.gameOver").animate({ bottom: '280px' }, "slow");
+  $("div.gameOver").animate({ bottom: '500px' }, "slow");
   clearInterval(ticker);
 }
 
