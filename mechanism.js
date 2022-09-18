@@ -70,7 +70,9 @@ function updateSnakeCell() {
         renderFruitCell();
         score += 10;
         $('#scoreBoard').html('Your Score : ' + score);
+        
         speed = speed - 2 > 50 ? speed - 2 : speed;
+        
         clearInterval(ticker);
         startGame();
       }
