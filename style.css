@@ -29,11 +29,12 @@ body {
   margin-left: -100px;
   position: fixed;
   left: 50%;
-  bottom: -100px;
+  bottom: -30px;
   display: block;
   color: #d61717;
   text-align: center;
   padding: 10px 0;
+  font-size: 150%;
 }
 .final{
   padding-top: 25px;
