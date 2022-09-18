@@ -46,7 +46,7 @@ function updateSnakeCell() {
   var newCell = {
     length: 0
   }
-  if (snakeNewHead[0] < 0 || snakeNewHead[1] < 0) {
+  if ((snakeNewHead[0] < 0 || snakeNewHead[1] < 0)|| (snakeNewHead[0] >= size || snakeNewHead[1] >= size)) {
     $(document).ready(function () {
       $('table').hide('slow');
       $('#scoreBoard').hide('slow');
@@ -54,15 +54,7 @@ function updateSnakeCell() {
     });
     gameOver()
     return;
-  } else if (snakeNewHead[0] >= size || snakeNewHead[1] >= size) {
-    $(document).ready(function () {
-      $('table').hide('slow');
-      $('#scoreBoard').hide('slow');
-      $('div.gameOver').append('<div class="final">You&#39;ve Scored : '+score+'</div>');
-    });
-    gameOver();
-    return;
-  }
+  } 
   var newCell = $('tr').eq(snakeNewHead[0]).find('td').eq(snakeNewHead[1]);
   if (newCell.length == 0) {
     $(document).ready(function () {
