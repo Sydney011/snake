@@ -45,13 +45,8 @@ $i = 0;
     ?>
     </ol>
   </div>
-<<<<<<< HEAD
 
   <button id="start">Start</button>
-=======
-  
-  <button id="start">Start</button>
->>>>>>> 6d5ec766c0ec73ef6e55141c724d933f77c3ca92
 
   <script src="jquery-3.6.1.js"></script>
   <script src="mechanism.js"></script>
