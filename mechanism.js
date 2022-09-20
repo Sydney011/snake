@@ -26,7 +26,7 @@ function getFruitCell() {
 function gameOver() {
   $("div.gameOver").fadeTo("slow", 1);
   $("div.gameOver").animate({
-    bottom: '500px'
+    bottom: '200px'
   }, "slow");
   clearInterval(ticker);
 }
