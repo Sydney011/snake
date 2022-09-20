@@ -8,12 +8,37 @@ body{
   margin: 0 auto;
   font-family: Arial;
 }
-body .dark{
+.dark{
   background-color: #222;
 }
+.light{
+  background-color: #fffbc7;
+}
 
+button{
+  width: 230px;
+  height: 60px;
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  transition: 0.4s;
+}
+.dark button:hover {
+  box-shadow: 0px 0px 10px 0px #a9edff;
+  background-color: #85c9f3;
+  border-color: #85c9f3;
+  transition: 0.2s;
+  color: black;
+}
+.light button:hover{
+  box-shadow: 0px 0px 10px 0px #ffe600;
+  background-color: #fff06a;
+  border-color: #fff06a;
+  transition: 0.2s;
+  color: black;
+}
 /*------------------Button Play Again------------------*/
-#play {
+#play{
   margin-top: 20px;
   color: #333;
   background-color: #4ade1c;
@@ -22,6 +47,7 @@ body .dark{
   display: inline-block;
   border-radius: 5px;
 }
+
 #play:hover {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.8);
 }
@@ -49,67 +75,81 @@ td{
   border-radius: 40%;
 }
 
-td.snakeCell {
+.dark td.snakeCell {
   background: #2d63c4;
 }
 
-td.snakeHead {
+.dark td.snakeHead {
   background: #4789d9;
 }
 
-td.fruitCell {
+.dark td.fruitCell {
   background: #4ade1c;
+}
+.light td.snakeCell {
+  background: #2d63c4;
+}
+
+.light td.snakeHead {
+  background: #4789d9;
+}
+
+.light td.fruitCell {
+  background: #ff4545;
 }
 table{
   width: 450px;
   height: 450px;
-  background-color: #333;
-  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.3);
 }
-
+.dark table{
+  background-color: #333; 
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.3); 
+}
+.light table{
+  background-color: #ffe48b;
+  box-shadow: 0px 8px 20px 0px rgba(255, 230, 0, 0.3);
+}
 #scoreBoard {
   margin-top: 50px;
   width: 450px;
-  background-color: #444;
   padding: 10px 0;
   text-align: center;
   color: #999;
 }
-
-
+.dark #scoreBoard{
+  background-color: #444;
+}
+.light #scoreBoard{
+  background-color: #ffda60;
+}
 /*------------------Button Start------------------*/
-button {
-  width: 230px;
-  height: 60px;
+#start{ 
   margin-left: -100px;
   position: fixed;
   left: 49%;
   bottom: 250px;
-  display: block;
-  text-align: center;
-  padding: 10px 0;
-  transition: 0.4s;
-}
-button:hover {
-  box-shadow: 0px 0px 10px 0px #a9edff;
-  background-color: #85c9f3;
-  border-color: #85c9f3;
-  transition: 0.2s;
 }
 /*------------------Best Scores------------------*/
 .BestScores{
-  border: 1px #222 solid;
-  box-shadow: 0px 0px 10px 0px #000;
   display: grid;
   grid-template: 250px 100px;
   column-gap: 2px;
-  background-color: #333;
   width: auto;
-  color: #999;
   height: auto;
   position: fixed;
-  margin-top: 50px;
-  left: 100px;
+  left: 20px;
+}
+.dark .BestScores{
+  color: #999;
+  border: 1px #222 solid;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  background-color: #333;
+}
+.light .BestScores{
+  color: #5a5a5a;
+  border: 1px #fffbc7 solid;
+  background-color: #ffe48b;
+  box-shadow: 0px 0px 10px 0px rgba(255, 230, 0, 0.3);
 }
 li{
   margin-left: 30px;
@@ -133,6 +173,8 @@ li{
   width: 150px;
   height: 150px;
   position: fixed;
-  margin-top: -50px;
-  right: 0;
+  right: 100px;
 }
+
+
+

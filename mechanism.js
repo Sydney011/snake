@@ -144,7 +144,7 @@ function startGame() {
   ticker = setInterval(updateSnakeCell, speed);
 }
 
-$('button').click(function () {
+$('#start').click(function () {
   $('body').append('<div id="scoreBoard">Your Score : </div>')
   renderBoard();
   renderFruitCell();
@@ -154,6 +154,6 @@ $('button').click(function () {
   startGame();
   $('table').click();
 });
-$('button').click(function () {
+$('#start').click(function () {
   $(this).fadeOut('fast');
 });

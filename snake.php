@@ -3,7 +3,7 @@ $conn = mysqli_connect('localhost','root','','snake');
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
-echo "<p style='color:white;'>Connected successfully</p>";
+echo "<br>";
 $sql = "SELECT id, nick, score FROM scoreboard ORDER BY score DESC";
 $result = $conn->query($sql);
 $i = 0;
@@ -46,7 +46,7 @@ $i = 0;
     </ol>
   </div>
 
-  <button>Start</button>
+  <button id="start">Start</button>
 
   <script src="jquery-3.6.1.js"></script>
   <script src="mechanism.js"></script>
