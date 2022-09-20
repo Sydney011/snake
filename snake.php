@@ -16,7 +16,10 @@ $i = 0;
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="dark light">
+  <div class="themeChanger">
+  <button onclick="LightMode()">Change Theme</button>
+  </div>
   <div class="gameOver" style="display:none">
     <span id="oops">Oops! Game Over</span>
     <span>You&#39;ve Lost Sadge</span>
@@ -47,6 +50,16 @@ $i = 0;
 
   <script src="jquery-3.6.1.js"></script>
   <script src="mechanism.js"></script>
+  <script type="text/javascript">
+    function LightMode(){
+    var element = document.body;
+    if(element.classList == "dark"){
+        element.classList = "light";
+    }else{
+        element.classList = "dark";
+    }
+}
+  </script>
 </body>
 
 </html>
